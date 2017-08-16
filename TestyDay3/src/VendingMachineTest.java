@@ -3,36 +3,14 @@ import org.junit.Test;
 
 public class VendingMachineTest {
 
-      VendingMachine vendingMachine=new VendingMachine();
-    @Test
-    public void WhenChooseingProductsWithoutMoneyNotihingHappen(){
-        String result=vendingMachine.execute("A");
-        Assert.assertEquals("",result);
-    }
 
     @Test
+    public void nothing(){
+        Kasa kasa=null;
+        Produkt produkt=null;
+        VendingMachine vendingMachine=new VendingMachine(kasa,produkt);
+    }
 
-    public void WhenInsertNotEnoughMoneyAndPressProductGiveMoneyBack(){
-        String result=vendingMachine.execute("DA");
-        Assert.assertEquals("D",result);
-
-    }
-    @Test
-    public void WhenInsertQuarterIWantQuaterBack(){
-        String result=vendingMachine.execute("QA");
-        Assert.assertEquals("Q",result);
-    }
-    @Test
-
-    public void WhenInsertMoreThanOneCoinShouldReturnThemAll(){
-        String result=vendingMachine.execute("DQNsA");
-        Assert.assertEquals("DQNs",result);
-    }
-    @Test
-    public void WhenClickAShouldGetAWithhoutMoney(){
-        String result=vendingMachine.execute("AA");
-        Assert.assertEquals("",result);
-    }
 
 
 
