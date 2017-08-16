@@ -9,6 +9,7 @@ public class VendingMachineTest {
         Kasa kasa=null;
         Produkt produkt=null;
         VendingMachine vendingMachine=new VendingMachine(kasa,produkt);
+
     }
 
 
