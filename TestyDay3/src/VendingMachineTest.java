@@ -22,6 +22,18 @@ public class VendingMachineTest {
         String result=vendingMachine.execute("QA");
         Assert.assertEquals("Q",result);
     }
+    @Test
+
+    public void WhenInsertMoreThanOneCoinShouldReturnThemAll(){
+        String result=vendingMachine.execute("DQNsA");
+        Assert.assertEquals("DQNs",result);
+    }
+    @Test
+    public void WhenClickAShouldGetAWithhoutMoney(){
+        String result=vendingMachine.execute("AA");
+        Assert.assertEquals("",result);
+    }
+
 
 
 }
