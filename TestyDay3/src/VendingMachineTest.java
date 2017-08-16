@@ -17,4 +17,11 @@ public class VendingMachineTest {
         Assert.assertEquals("D",result);
 
     }
+    @Test
+    public void WhenInsertQuarterIWantQuaterBack(){
+        String result=vendingMachine.execute("QA");
+        Assert.assertEquals("Q",result);
+    }
+
+
 }
