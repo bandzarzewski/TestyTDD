@@ -7,6 +7,6 @@ public class VendingMachineTest {
     public void WhenChooseingProductsWithoutMoneyNotihingHappen(){
         VendingMachine vendingMachine=new VendingMachine();
         String result=vendingMachine.execute("A");
-        Assert.fail();
+        Assert.assertEquals("",result);
     }
 }
