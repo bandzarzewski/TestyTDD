@@ -2,11 +2,19 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class VendingMachineTest {
-    @Test
 
+      VendingMachine vendingMachine=new VendingMachine();
+    @Test
     public void WhenChooseingProductsWithoutMoneyNotihingHappen(){
-        VendingMachine vendingMachine=new VendingMachine();
         String result=vendingMachine.execute("A");
         Assert.assertEquals("",result);
+    }
+
+    @Test
+
+    public void WhenInsertNotEnoughMoneyAndPressProductGiveMoneyBack(){
+        String result=vendingMachine.execute("DA");
+        Assert.assertEquals("D",result);
+
     }
 }
